@@ -36,6 +36,7 @@ class SqsTransportFactory implements TransportFactoryInterface, DriverFactoryInt
             ->children()
                 ->scalarNode('key')->defaultNull()->end()
                 ->scalarNode('secret')->defaultNull()->end()
+                ->scalarNode('endpoint')->defaultNull()->end()
                 ->scalarNode('token')->defaultNull()->end()
                 ->scalarNode('region')->isRequired()->end()
                 ->integerNode('retries')->defaultValue(3)->end()

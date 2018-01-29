@@ -104,6 +104,10 @@ class SqsConnectionFactory implements PsrConnectionFactory
             }
         }
 
+        if (isset($this->config['endpoint'])) {
+            $config['endpoint'] = $this->config['endpoint'];
+        }
+
         $this->client = new SqsClient($config);
 
         return $this->client;
